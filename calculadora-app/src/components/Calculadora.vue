@@ -17,7 +17,7 @@
     <div class="botao">2</div>
     <div class="botao">3</div>
     <div class="botao operadores">+</div>
-    <div class="botao">0</div>
+    <div class="botao zero">0</div>
     <div class="botao">.</div>
     <div class="botao operadores">=</div>
   </div>
@@ -42,7 +42,7 @@ export default {
 }
 
 .zero {
-  grid-column: 1/3;
+  grid-column: 1 / 3;
 }
 
 .botao {
