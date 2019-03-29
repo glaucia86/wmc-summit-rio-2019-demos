@@ -1,25 +1,25 @@
 <template>
   <div class="calculadora">
     <div class="display">0.5656565</div>
-    <div class="button">C</div>
-    <div class="button">+/-</div>
-    <div class="button">%</div>
-    <div class="button">÷</div>
-    <div class="button">7</div>
-    <div class="button">8</div>
-    <div class="button">9</div>
-    <div class="button">x</div>
-    <div class="button">4</div>
-    <div class="button">5</div>
-    <div class="button">6</div>
-    <div class="button">-</div>
-    <div class="button">1</div>
-    <div class="button">2</div>
-    <div class="button">3</div>
-    <div class="button">+</div>
-    <div class="button">0</div>
-    <div class="button">.</div>
-    <div class="button">=</div>
+    <div class="botao">C</div>
+    <div class="botao">+/-</div>
+    <div class="botao">%</div>
+    <div class="botao operadores">÷</div>
+    <div class="botao">7</div>
+    <div class="botao">8</div>
+    <div class="botao">9</div>
+    <div class="botao operadores">x</div>
+    <div class="botao">4</div>
+    <div class="botao">5</div>
+    <div class="botao">6</div>
+    <div class="botao operadores">-</div>
+    <div class="botao">1</div>
+    <div class="botao">2</div>
+    <div class="botao">3</div>
+    <div class="botao operadores">+</div>
+    <div class="botao">0</div>
+    <div class="botao">.</div>
+    <div class="botao operadores">=</div>
   </div>
 </template>
 
@@ -45,8 +45,13 @@ export default {
   grid-column: 1/3;
 }
 
-.button {
+.botao {
   background-color: #eee;
   border: 1px solid #333;
+}
+
+.operadores {
+  background-color: orange;
+  color: white;
 }
 </style>
