@@ -30,7 +30,9 @@ export default {
 
 <style scoped>
 .calculadora {
-  font-size: 45px;
+  margin: 0 auto;
+  width: 250px;
+  font-size: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
@@ -38,7 +40,8 @@ export default {
 
 .display {
   grid-column: 1 / 5;
-  background-color: red;
+  background-color: #333;
+  color: white;
 }
 
 .zero {
@@ -46,8 +49,8 @@ export default {
 }
 
 .botao {
-  background-color: #eee;
-  border: 1px solid #333;
+  background-color: #f2f2f2;
+  border: 1px solid #999;
 }
 
 .operadores {
