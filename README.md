@@ -12,13 +12,13 @@ Repositório responsável pelas demos realizadas durante o evento **[WoMakersCod
 
 ## Executando a Aplicação Localmente: ❗️
 
-1) Instalar os pacotes com o comando: (dentro da pasta `api`)
+1) Instalar os pacotes com o comando: (dentro da pasta `calculadora-app`)
 
 ``` 
 > npm install
 ```
 
-2) Depois executar o seguinte comando para executar a aplicação (dentro da pasta `api`):
+2) Depois executar o seguinte comando para executar a aplicação (dentro da pasta `calculadora-app`):
 
 ```
 > npm run dev
