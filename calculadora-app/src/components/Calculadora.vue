@@ -1,9 +1,9 @@
 <template>
   <div class="calculadora">
-    <div class="display">0.5656565</div>
-    <div class="botao">C</div>
-    <div class="botao">+/-</div>
-    <div class="botao">%</div>
+    <div class="display">{{ valorCorrente || '0' }}</div>
+    <div @click="limpar" class="botao">C</div>
+    <div @click="sinal" class="botao">+/-</div>
+    <div @click="porcentagem" class="botao">%</div>
     <div class="botao operadores">÷</div>
     <div class="botao">7</div>
     <div class="botao">8</div>
@@ -25,6 +25,25 @@
 
 <script>
 export default {
+  data() {
+    return {
+      valorCorrente: '',
+    };
+  },
+
+  methods: {
+    limpar() {
+      this.valorCorrente = '';
+    },
+    sinal() {
+      this.valorCorrente = this.valorCorrente.charAt(0) === '-'
+        ? this.valorCorrente.slice(1)
+        : `-${this.valorCorrente}`;
+    },
+    porcentagem() {
+      this.valorCorrente = `${parseFloat(this.valorCorrente) / 100}`;
+    },
+  },
 };
 </script>
 
