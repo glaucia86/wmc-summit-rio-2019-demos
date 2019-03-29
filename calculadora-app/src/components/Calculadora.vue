@@ -4,22 +4,22 @@
     <div @click="limpar" class="botao">C</div>
     <div @click="sinal" class="botao">+/-</div>
     <div @click="porcentagem" class="botao">%</div>
-    <div class="botao operadores">÷</div>
-    <div class="botao">7</div>
-    <div class="botao">8</div>
-    <div class="botao">9</div>
-    <div class="botao operadores">x</div>
-    <div class="botao">4</div>
-    <div class="botao">5</div>
-    <div class="botao">6</div>
-    <div class="botao operadores">-</div>
-    <div class="botao">1</div>
-    <div class="botao">2</div>
-    <div class="botao">3</div>
-    <div class="botao operadores">+</div>
-    <div class="botao zero">0</div>
-    <div class="botao">.</div>
-    <div class="botao operadores">=</div>
+    <div @click="dividir" class="botao operadores">÷</div>
+    <div @click="juntarNumeros('7')" class="botao">7</div>
+    <div @click="juntarNumeros('8')" class="botao">8</div>
+    <div @click="juntarNumeros('9')" class="botao">9</div>
+    <div @click="multiplicar" class="botao operadores">x</div>
+    <div @click="juntarNumeros('4')" class="botao">4</div>
+    <div @click="juntarNumeros('5')" class="botao">5</div>
+    <div @click="juntarNumeros('6')" class="botao">6</div>
+    <div @click="diminuir" class="botao operadores">-</div>
+    <div @click="juntarNumeros('1')" class="botao">1</div>
+    <div @click="juntarNumeros('2')" class="botao">2</div>
+    <div @click="juntarNumeros('3')" class="botao">3</div>
+    <div @click="somar" class="botao operadores">+</div>
+    <div @click="juntarNumeros('0')" class="botao zero">0</div>
+    <div @click="ponto" class="botao">.</div>
+    <div @click="resultado" class="botao operadores">=</div>
   </div>
 </template>
 
@@ -27,7 +27,10 @@
 export default {
   data() {
     return {
+      numeroAnterior: null,
       valorCorrente: '',
+      operador: null,
+      operadorClicado: false,
     };
   },
 
@@ -35,13 +38,63 @@ export default {
     limpar() {
       this.valorCorrente = '';
     },
+
     sinal() {
       this.valorCorrente = this.valorCorrente.charAt(0) === '-'
         ? this.valorCorrente.slice(1)
         : `-${this.valorCorrente}`;
     },
+
     porcentagem() {
       this.valorCorrente = `${parseFloat(this.valorCorrente) / 100}`;
+    },
+
+    juntarNumeros(numero) {
+      if (this.operadorClicado) {
+        this.valorCorrente = '';
+        this.operadorClicado = false;
+      }
+
+      this.valorCorrente = `${this.valorCorrente}${numero}`;
+    },
+
+    ponto() {
+      if (this.valorCorrente.indexOf('.') === -1) {
+        this.juntarNumeros('.');
+      }
+    },
+
+    setarValor() {
+      this.numeroAnterior = this.valorCorrente;
+      this.operadorClicado = true;
+    },
+
+    dividir() {
+      this.operador = (a, b) => a / b;
+      this.setarValor();
+    },
+
+    multiplicar() {
+      this.operador = (a, b) => a * b;
+      this.setarValor();
+    },
+
+    diminuir() {
+      this.operador = (a, b) => a - b;
+      this.setarValor();
+    },
+
+    somar() {
+      this.operador = (a, b) => a + b;
+      this.setarValor();
+    },
+
+    resultado() {
+      this.valorCorrente = `${this.operador(
+        parseFloat(this.numeroAnterior),
+        parseFloat(this.valorCorrente),
+      )}`;
+      this.numeroAnterior = null;
     },
   },
 };
@@ -50,7 +103,7 @@ export default {
 <style scoped>
 .calculadora {
   margin: 0 auto;
-  width: 250px;
+  width: 350px;
   font-size: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
