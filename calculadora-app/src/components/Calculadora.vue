@@ -1,6 +1,17 @@
 <template>
-  <div>
-    <h1>Olá Mundo!</h1>
+  <div class="calculadora">
+    <div class="display">0.5656565</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
+    <div class="">oi</div>
   </div>
 </template>
 
@@ -9,6 +20,16 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.calculadora {
+  font-size: 45px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.display {
+  grid-column: 1 / 5;
+  background-color: red;
+}
 </style>
