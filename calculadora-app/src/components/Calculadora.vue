@@ -24,6 +24,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -35,7 +36,7 @@ export default {
   },
 
   methods: {
-    // Método responsável por limpar o display da Calculadora
+    // Método responsável por limpar o display da 'Calculadora'
     limpar() {
       this.valorCorrente = '';
     },
