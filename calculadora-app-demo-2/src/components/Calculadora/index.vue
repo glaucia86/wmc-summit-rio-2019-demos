@@ -23,36 +23,6 @@
   </div>
 </template>
 
-<script src="./Calculadora.js">l
-</script>
+<script src="./Calculadora.js"></script>
 
-<style scoped>
-.calculadora {
-  margin: 0 auto;
-  width: 350px;
-  font-size: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(50px, auto);
-}
-
-.display {
-  grid-column: 1 / 5;
-  background-color: #333;
-  color: white;
-}
-
-.zero {
-  grid-column: 1 / 3;
-}
-
-.botao {
-  background-color: #f2f2f2;
-  border: 1px solid #999;
-}
-
-.operadores {
-  background-color: orange;
-  color: white;
-}
-</style>
+<style src="./calculadora.css" scoped />
