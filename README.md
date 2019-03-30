@@ -6,9 +6,9 @@ Repositório responsável pelas demos realizadas durante o evento **[WoMakersCod
 
 ## Recursos Utilizados: 💻
 
-- **[VsCode](http://bit.ly/2uwUue0)**
-- **[Node.js](https://nodejs.org/en/)**
-- **[Vue-Cli](https://cli.vuejs.org/)**
+- **[Download AQUI - VsCode](http://bit.ly/2uwUue0)**
+- **[Dowload AQUI - Node.js](https://nodejs.org/en/)**
+- **[Download AQUI - Vue-Cli](https://cli.vuejs.org/)**
 
 ## Executando a Aplicação Localmente: ❗️
 
