@@ -35,5 +35,5 @@ Repositório responsável pelas demos realizadas durante o evento **[WoMakersCod
 
 ## Tenho Dúvidas... O que Faço?! 🚩
 
-Caso tenha dúvidas ao código desenvolvido durante o webinar, sinta-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/glaucia86/wmc-summit-rio-2019-demos/issues)** no repositório com a sua dúvida. Assim que possível, estaremos respondendo as todas as dúvidas que tiverem!
+Caso tenha dúvidas ao código desenvolvido, sinta-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/glaucia86/wmc-summit-rio-2019-demos/issues)** no repositório com a sua dúvida. Assim que possível, estarei respondendo a todas as dúvidas que tiverem!
 
